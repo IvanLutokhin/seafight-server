@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.7.0" class="java.beans.XMLDecoder">
+	<object class="seafight.beans.SelectorBean">
+		<void property="host">
+			<string>*</string>
+		</void>
+		<void property="port">
+			<int>20000</int>
+		</void>
+	</object>
+</java>
