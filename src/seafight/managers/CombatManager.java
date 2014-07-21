@@ -50,7 +50,7 @@ public class CombatManager extends Thread {
 			while(iterator.hasNext()) {
 				Room room = iterator.next();
 				
-				if(room.getState() == RoomState.REQUEST /*&& room.getExpireTime() <= currentTime*/) {
+				if(room.getState() == RoomState.REQUEST && room.getExpireTime() <= currentTime) {
 					ThreadClient bot = new ThreadClient();
 					new Thread(bot).start();
 					room.addFighter(bot);
