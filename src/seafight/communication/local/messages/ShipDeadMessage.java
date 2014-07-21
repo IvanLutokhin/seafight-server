@@ -12,8 +12,7 @@ public class ShipDeadMessage extends Message {
 	public void execute(ThreadClient client) {
 		ShipDeadVO sdvo = (ShipDeadVO) this.vo;
 		
-		if(!client.getThreadContext().isShipDead()) {
-			System.out.println("Bot clear env");
+		if(!client.getThreadContext().isShipDead()) {			
 			ShipEnvironment shipEnvironment = MapHelper.getShipEnvironment(new Position(sdvo.getPositionX(), sdvo.getPositionY()), sdvo.getSize(), sdvo.getOrientation());
 			client.getThreadContext().removeShipEnvironmentPositions(shipEnvironment);
 		}

@@ -6,8 +6,7 @@ import seafight.mechanics.combat.Position;
 
 public class TurnStepMessage extends Message {
 	@Override
-	public void execute(ThreadClient client) {
-		System.out.println(client.getThreadContext().getPositions().size());
+	public void execute(ThreadClient client) {		
 		int k = (int) (Math.random() * client.getThreadContext().getPositions().size());
 		
 		Position position = client.getThreadContext().getPositions().get(k);
